@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins&family=Satisfy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  height: 80px;
+  padding: 3% 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  color: #FFFFFF; }
+  header h1 {
+    font-family: "Satisfy", "cursive";
+    font-size: 4.5rem;
+    color: #FFFFFF; }
+  header #checkMenu,
+  header #menu {
+    display: none; }
+  header nav ul {
+    display: flex;
+    list-style: none; }
+    header nav ul li {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      border-bottom: 3px solid transparent; }
+      header nav ul li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 1.1rem; }
+      header nav ul li:not(:last-child) {
+        margin-right: 40px; }
+      header nav ul li:hover {
+        border-bottom: 3px solid #FFFFFF;
+        cursor: pointer;
+        transition: all 1s ease; }
+
+main {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-image: url("../img/mainImage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  main section {
+    width: 25%;
+    height: 100%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    main section p {
+      font-family: "Paytone One", sans-serif;
+      font-size: 3rem;
+      color: #fff; }
+      main section p:not(:last-child) {
+        margin-bottom: 50px; }
+
+.products {
+  background-color: #313131; }
+  .products h2 {
+    color: #FFFFFF;
+    font-family: "Paytone One", sans-serif;
+    font-size: 4.5rem; }
+  .products .specialProducts {
+    padding: 8% 10%; }
+    .products .specialProducts .productSubtitle {
+      color: #EBCFB8;
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem; }
+    .products .specialProducts .productGrid {
+      margin: 5% 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: 5%; }
+      .products .specialProducts .productGrid .productArticle .productCard {
+        width: 100%;
+        height: 300px;
+        color: #FFFFFF;
+        font-family: "Poppins", sans-serif;
+        position: relative; }
+        .products .specialProducts .productGrid .productArticle .productCard .productFace {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: 1s; }
+        .products .specialProducts .productGrid .productArticle .productCard .productFront {
+          transform: perspective(600px) rotateY(0deg); }
+          .products .specialProducts .productGrid .productArticle .productCard .productFront img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .products .specialProducts .productGrid .productArticle .productCard .productBack {
+          padding: 15px;
+          transform: perspective(600px) rotateY(180deg);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          color: #000000;
+          background: #EBCFB8;
+          font-size: 1.5em;
+          text-align: center; }
+        .products .specialProducts .productGrid .productArticle .productCard .productFooter {
+          position: absolute;
+          bottom: 0; }
+        .products .specialProducts .productGrid .productArticle .productCard:hover .productFront {
+          transform: perspective(600px) rotateY(180deg); }
+        .products .specialProducts .productGrid .productArticle .productCard:hover .productBack {
+          transform: perspective(600px) rotateY(360deg); }
+      .products .specialProducts .productGrid .productArticle .productFooter {
+        margin-top: 20px;
+        font-family: "Poppins", sans-serif; }
+        .products .specialProducts .productGrid .productArticle .productFooter h3 {
+          font-size: 1.5em;
+          font-weight: 400;
+          color: #FFFFFF; }
+        .products .specialProducts .productGrid .productArticle .productFooter p {
+          font-size: 1.5em;
+          color: #EBCFB8; }
+  .products .otherProducts {
+    padding: 3% 10% 10%; }
+    .products .otherProducts .otherProductsGrid {
+      margin: 5% 0;
+      width: 100%;
+      height: 600px;
+      display: grid;
+      grid-template-areas: "productsToPrepare desserts" "productsToPrepare littleProducts";
+      grid-template-rows: 49% 49%;
+      grid-template-columns: 48% 48%;
+      row-gap: 4%;
+      column-gap: 2%; }
+      .products .otherProducts .otherProductsGrid .productsToPrepare {
+        grid-area: productsToPrepare;
+        border-radius: 10px;
+        overflow: hidden; }
+      .products .otherProducts .otherProductsGrid .desserts {
+        grid-area: desserts;
+        border-radius: 10px;
+        overflow: hidden; }
+      .products .otherProducts .otherProductsGrid .littleProducts {
+        grid-area: littleProducts;
+        border-radius: 10px;
+        overflow: hidden; }
+      .products .otherProducts .otherProductsGrid .otherProductsHover {
+        position: relative;
+        border: 1px solid #313131;
+        box-shadow: 5px 10px 15px #000000; }
+        .products .otherProducts .otherProductsGrid .otherProductsHover img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .products .otherProducts .otherProductsGrid .labelHidden {
+        height: 100px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0px;
+        background-color: #000000;
+        opacity: .8;
+        color: #FFFFFF;
+        text-align: center;
+        transition: .5s; }
+        .products .otherProducts .otherProductsGrid .labelHidden h3 {
+          margin-bottom: 30px;
+          font-family: "Paytone One", sans-serif;
+          font-size: 3rem; }
+        .products .otherProducts .otherProductsGrid .labelHidden p {
+          font-family: "Poppins", sans-serif;
+          font-size: 2rem;
+          opacity: 0; }
+      .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden {
+        height: 90%; }
+      .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden p {
+        margin: 0 1%;
+        opacity: 1; }
+        .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden p:not(:last-child) {
+          margin-bottom: 30px; }
+      .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden p {
+        margin: 0 1%;
+        opacity: 1; }
+
+.aboutUs {
+  padding: 8% 10% 10%;
+  background-color: #EBCFB8; }
+  .aboutUs h2 {
+    margin-bottom: 50px;
+    color: #000000;
+    font-family: "Paytone One", sans-serif;
+    font-size: 4.5rem; }
+  .aboutUs .mainInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .aboutUs .mainInfoContainer .infoContainer {
+      width: 65%;
+      display: flex;
+      flex-direction: column; }
+      .aboutUs .mainInfoContainer .infoContainer p {
+        color: #000000;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem; }
+      .aboutUs .mainInfoContainer .infoContainer p:not(:last-child) {
+        margin-bottom: 50px; }
+    .aboutUs .mainInfoContainer .personalContainer {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+        height: 20%;
+        display: flex;
+        position: relative; }
+        .aboutUs .mainInfoContainer .personalContainer .personalItemContainer img {
+          height: 100%;
+          border-radius: 50%;
+          position: absolute;
+          z-index: 10; }
+        .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+          height: 100%;
+          width: 100%;
+          padding-left: 35%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: start;
+          background-color: #74554D;
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); }
+          .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem h3 {
+            color: #FFFFFF;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem; }
+          .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem p {
+            color: #FFFFFF;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.2rem; }
+
+.contact {
+  padding: 8% 10% 10%;
+  background-color: #313131; }
+  .contact h2 {
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    font-family: "Paytone One", sans-serif;
+    font-size: 4.5em; }
+  .contact .contactContainer {
+    display: flex;
+    justify-content: space-between; }
+    .contact .contactContainer .ordersContainer {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .contact .contactContainer .ordersContainer p {
+        color: #FFFFFF;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem; }
+      .contact .contactContainer .ordersContainer .contactItemContainer {
+        margin-top: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .contact .contactContainer .ordersContainer .contactItemContainer .contactItem {
+          display: flex;
+          align-items: center; }
+          .contact .contactContainer .ordersContainer .contactItemContainer .contactItem img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px; }
+          .contact .contactContainer .ordersContainer .contactItemContainer .contactItem p {
+            font-size: 1.5rem; }
+    .contact .contactContainer .locationContainer {
+      width: 50%; }
+      .contact .contactContainer .locationContainer p {
+        color: #FFFFFF;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem; }
+      .contact .contactContainer .locationContainer .locationFrame {
+        margin-top: 20px;
+        width: 100%;
+        height: 350px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        box-shadow: 5px 10px 15px #000000; }
+
+footer {
+  padding: 5% 10%;
+  display: flex;
+  background-color: #EBCFB8; }
+  footer .footerBrand {
+    width: 30%; }
+    footer .footerBrand h2 {
+      font-family: "Satisfy", "cursive";
+      font-size: 2.5rem; }
+    footer .footerBrand p {
+      color: #313131;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.3rem; }
+  footer .footerSocial {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer .footerSocial ul {
+      display: flex;
+      list-style: none; }
+      footer .footerSocial ul li:not(:last-child) {
+        margin-right: 20px; }
+      footer .footerSocial ul .facebook img:last-child {
+        display: none; }
+      footer .footerSocial ul .facebook:hover img:last-child {
+        display: block; }
+      footer .footerSocial ul .facebook:hover img:first-child {
+        display: none; }
+      footer .footerSocial ul .instagram img:last-child {
+        display: none; }
+      footer .footerSocial ul .instagram:hover img:last-child {
+        display: block; }
+      footer .footerSocial ul .instagram:hover img:first-child {
+        display: none; }
+      footer .footerSocial ul .youtube img:last-child {
+        display: none; }
+      footer .footerSocial ul .youtube:hover img:last-child {
+        display: block; }
+      footer .footerSocial ul .youtube:hover img:first-child {
+        display: none; }
+  footer .footerSignature {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end; }
+    footer .footerSignature p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem; }
+
+@media screen and (max-width: 1700px) {
+  main section p {
+    font-size: 2.5rem; }
+  .products .specialProducts .productGrid {
+    gap: 3%; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+    padding-left: 45%; } }
+
+@media screen and (max-width: 1500px) {
+  header {
+    height: 100px; }
+  .products .otherProducts .otherProductsGrid .labelHidden p {
+    font-size: 1.8rem; }
+  .aboutUs .mainInfoContainer .infoContainer {
+    width: 60%; }
+  .aboutUs .mainInfoContainer .personalContainer {
+    width: 30%; } }
+
+@media screen and (max-width: 1400px) {
+  main section {
+    width: 25%; }
+    main section p {
+      font-size: 2.2rem; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+    padding-left: 50%; } }
+
+@media screen and (max-width: 1300px) {
+  .products .specialProducts .productGrid {
+    grid-template-columns: repeat(2, 1fr); }
+  .aboutUs .mainInfoContainer .infoContainer {
+    width: 55%; }
+  .aboutUs .mainInfoContainer .personalContainer {
+    width: 40%; } }
+
+@media screen and (max-width: 1200px) {
+  .products .specialProducts .productSubtitle {
+    font-size: 1.8rem; }
+  .otherProducts .otherProductsGrid .otherProductsHover .labelHidden p {
+    font-size: 1.5rem; }
+  .otherProducts .otherProductsGrid .otherProductsHover .labelHidden h3 {
+    font-size: 2.3rem; }
+  .aboutUs .mainInfoContainer {
+    flex-direction: column; }
+    .aboutUs .mainInfoContainer .infoContainer {
+      width: 100%;
+      margin-bottom: 50px; }
+    .aboutUs .mainInfoContainer .personalContainer {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+        width: 45%;
+        height: 150px;
+        margin-bottom: 30px; }
+        .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+          width: 100%;
+          padding-left: 45%; }
+  footer .footerBrand p {
+    font-size: 1.1rem; }
+  footer .footerSignature p {
+    font-size: .9rem; } }
+
+@media screen and (max-width: 1100px) {
+  header nav ul li a {
+    font-size: .9rem; }
+  main section {
+    width: 30%;
+    margin-right: 5%; }
+    main section p {
+      font-size: 2rem; }
+  .otherProducts .otherProductsGrid .labelHidden h3 {
+    font-size: 2rem; }
+  .contact .contactContainer {
+    flex-direction: column; }
+    .contact .contactContainer .ordersContainer {
+      width: 100%;
+      margin-bottom: 50px; }
+      .contact .contactContainer .ordersContainer .contactItemContainer .contactItem:not(:last-child) {
+        margin-bottom: 30px; }
+    .contact .contactContainer .locationContainer {
+      width: 100%; } }
+
+@media screen and (max-width: 1000px) {
+  header h1 {
+    font-size: 3.5rem; }
+  header nav ul li a {
+    font-size: .9rem; }
+  main section {
+    width: 35%; }
+  .products h2 {
+    font-size: 3.5rem; }
+  .products .specialProducts .productSubtitle {
+    font-size: 1.6rem; }
+  .products .otherProducts .otherProductsGrid {
+    display: flex;
+    flex-direction: column;
+    height: max-content; }
+    .products .otherProducts .otherProductsGrid .productsToPrepare {
+      height: 300px;
+      margin-bottom: 30px; }
+    .products .otherProducts .otherProductsGrid .desserts {
+      height: 300px;
+      margin-bottom: 30px; }
+    .products .otherProducts .otherProductsGrid .littleProducts {
+      height: 300px; }
+    .products .otherProducts .otherProductsGrid .labelHidden {
+      height: 90px; }
+      .products .otherProducts .otherProductsGrid .labelHidden h3 {
+        margin-bottom: 10px;
+        font-size: 3rem; }
+      .products .otherProducts .otherProductsGrid .labelHidden p {
+        font-size: 1.5rem; }
+    .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden p {
+      margin: 0 1%;
+      opacity: 1; }
+      .products .otherProducts .otherProductsGrid .otherProductsHover:hover .labelHidden p:not(:last-child) {
+        margin-bottom: 15px; }
+  .aboutUs h2 {
+    font-size: 3.5rem; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+    padding-left: 50%; }
+  .contact h2 {
+    font-size: 3.5rem; }
+  footer .footerBrand {
+    width: 35%; }
+  footer .footerSocial {
+    width: 30%; }
+  footer .footerSignature {
+    width: 35%; } }
+
+@media screen and (max-width: 900px) {
+  header #checkMenu:not(:checked) ~ nav {
+    display: none; }
+  header #checkMenu:checked ~ nav {
+    display: block; }
+  header #menu {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    z-index: 1; }
+  header #closeMenu {
+    display: none; }
+  header #checkMenu:checked ~ label #openMenu {
+    display: none; }
+  header #checkMenu:checked ~ label #closeMenu {
+    display: block; }
+  header nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    background-color: #000000;
+    opacity: .9; }
+    header nav ul {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      transition: 1s all; }
+      header nav ul li {
+        height: 100%;
+        display: flex;
+        align-items: center; }
+        header nav ul li:not(:last-child) {
+          margin: 0; }
+        header nav ul li a {
+          font-size: 1.5rem; }
+  header button:focus + button {
+    display: none; }
+  header button:focus + nav {
+    display: block; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+    padding-left: 55%; }
+    .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem p {
+      font-size: 1.1rem; } }
+
+@media screen and (max-width: 800px) {
+  .aboutUs .mainInfoContainer .infoContainer p {
+    font-size: 1.3rem; }
+  .aboutUs .mainInfoContainer .infoContainer p:not(:last-child) {
+    margin-bottom: 30px; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+    height: 120px; }
+    .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+      padding-left: 50%; }
+      .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem p {
+        font-size: 1rem; }
+  footer .footerBrand p {
+    font-size: 1rem; }
+  footer .footerSignature p {
+    font-size: .8rem; } }
+
+@media screen and (max-width: 700px) {
+  main section p {
+    font-size: 2rem; }
+  .products h2 {
+    font-size: 2.6rem; }
+  .products .specialProducts .productSubtitle {
+    font-size: 1.5rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden h3 {
+    font-size: 2.5rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden p {
+    font-size: 1.3rem; }
+  .aboutUs h2 {
+    font-size: 2.6rem; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+    width: 48%;
+    height: 100px; }
+    .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem {
+      padding-left: 45%; }
+  .contact h2 {
+    font-size: 2.6rem; }
+  footer {
+    flex-direction: column;
+    align-items: center; }
+    footer .footerBrand {
+      margin-bottom: 30px;
+      width: 100%;
+      text-align: center; }
+    footer .footerSignature {
+      margin-top: 30px;
+      width: 100%;
+      justify-content: center; } }
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3rem; }
+  header nav ul li a {
+    font-size: 1rem; }
+  main section p {
+    font-size: 1.8rem; }
+    main section p:not(:last-child) {
+      margin-bottom: 30px; }
+  .products h2 {
+    font-size: 2.3rem; }
+  .products .specialProducts .productSubtitle {
+    font-size: 1.3rem; }
+  .products .specialProducts .productGrid .productArticle .productCard {
+    height: 250px; }
+    .products .specialProducts .productGrid .productArticle .productCard .productBack p {
+      font-size: 1.2rem; }
+  .products .specialProducts .productGrid .productArticle .productFooter h3 {
+    font-size: 1.3rem; }
+  .products .specialProducts .productGrid .productArticle .productFooter p {
+    font-size: 1.2rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden h3 {
+    font-size: 2.1rem; }
+  .aboutUs h2 {
+    font-size: 2.3rem; }
+  .aboutUs .mainInfoContainer .infoContainer p {
+    font-size: 1.2rem; }
+  .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+    height: 80px; }
+    .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem p {
+      font-size: .9rem; }
+  .contact h2 {
+    font-size: 2.3rem; }
+  .contact .contactContainer .ordersContainer p {
+    font-size: 1.2rem; }
+  .contact .contactContainer .ordersContainer .contactItemContainer .contactItem p {
+    font-size: 1.2rem; }
+  .contact .contactContainer .locationContainer p {
+    font-size: 1.2rem; } }
+
+@media screen and (max-width: 500px) {
+  main section {
+    width: 50%; }
+    main section p {
+      font-size: 1.8rem; }
+  .products .specialProducts {
+    margin-bottom: 100px; }
+    .products .specialProducts .productGrid {
+      grid-template-columns: repeat(1, 1fr);
+      height: max-content; }
+      .products .specialProducts .productGrid .productArticle .productCard {
+        height: 300px; }
+        .products .specialProducts .productGrid .productArticle .productCard .productBack p {
+          font-size: 1.4rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden h3 {
+    font-size: 1.7rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden p {
+    font-size: 1rem; }
+  .aboutUs .mainInfoContainer .infoContainer p {
+    font-size: 1.1rem; }
+  .aboutUs .mainInfoContainer .personalContainer {
+    flex-direction: column; }
+    .aboutUs .mainInfoContainer .personalContainer .personalItemContainer {
+      width: 100%;
+      height: 100px; }
+      .aboutUs .mainInfoContainer .personalContainer .personalItemContainer .personalItem p {
+        font-size: 1.1rem; } }
+
+@media screen and (max-width: 350px) {
+  header h1 {
+    font-size: 2.3rem; }
+  main section p {
+    font-size: 1.5rem; }
+  .products h2 {
+    font-size: 1.8rem; }
+  .products .specialProducts .productSubtitle {
+    font-size: 1.2rem; }
+  .products .specialProducts .productGrid .productArticle .productCard .productFooter h3 {
+    font-size: 1.2rem; }
+  .aboutUs h2 {
+    font-size: 1.8rem; }
+  .contact h2 {
+    font-size: 1.8rem; }
+  .contact .contactContainer .ordersContainer .contactItemContainer .contactItem p {
+    font-size: 1rem; }
+  .contact .contactContainer .locationContainer .locationFrame {
+    height: 250px; } }
+
+@media screen and (max-width: 300px) {
+  .products .specialProducts .productSubtitle {
+    font-size: 1.2rem; }
+  .products .specialProducts .productGrid .productArticle .productCard {
+    height: 200px; }
+    .products .specialProducts .productGrid .productArticle .productCard .productBack p {
+      font-size: 1.2rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden h3 {
+    font-size: 1.7rem; }
+  .products .otherProducts .otherProductsGrid .labelHidden p {
+    font-size: .9rem; }
+  .aboutUs .mainInfoContainer .infoContainer p {
+    font-size: 1rem; }
+  .contact .contactContainer .ordersContainer p {
+    font-size: 1rem; }
+  .contact .contactContainer .ordersContainer .contactItemContainer .contactItem img {
+    width: 30px;
+    height: 30px; }
+  .contact .contactContainer .locationContainer p {
+    font-size: 1rem; } }

@@ -1,0 +1,91 @@
+footer {
+    padding: 5% 10%;
+    display: flex;
+    background-color: $mainColor;
+
+    .footerBrand {
+        width: 30%;
+
+        h2 {
+            font-family: $mainFont;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: $thirdColor;
+            font-family: $textFont;
+            font-size: 1.3rem;
+        }
+    }
+
+    .footerSocial {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            .facebook {
+
+                & img:last-child {
+                    display: none;
+                }
+
+                &:hover img:last-child {
+                    display: block;
+                }
+
+                &:hover img:first-child {
+                    display: none;
+                }
+            }
+
+            .instagram {
+                & img:last-child {
+                    display: none;
+                }
+
+                &:hover img:last-child {
+                    display: block;
+                }
+
+                &:hover img:first-child {
+                    display: none;
+                }
+            }
+
+            .youtube {
+                & img:last-child {
+                    display: none;
+                }
+
+                &:hover img:last-child {
+                    display: block;
+                }
+
+                &:hover img:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .footerSignature {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        p {
+            font-family: $textFont;
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,1059 @@
+@media screen and (max-width: 1700px) {
+    main {
+
+        section {
+
+            p {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .products {
+
+        .specialProducts {
+
+            .productGrid {
+                gap: 3%;
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .personalContainer {
+
+                .personalItemContainer {
+
+                    .personalItem {
+                        padding-left: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    header {
+        height: 100px;
+    }
+
+    .products {
+
+        .otherProducts {
+
+            .otherProductsGrid {
+
+                .labelHidden {
+
+                    p {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .infoContainer {
+                width: 60%;
+            }
+
+            .personalContainer {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+
+        section {
+            width: 25%;
+
+            p {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .personalContainer {
+
+                .personalItemContainer {
+
+                    .personalItem {
+                        padding-left: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .products {
+
+        .specialProducts {
+
+            .productGrid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .infoContainer {
+                width: 55%;
+            }
+
+            .personalContainer {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .products {
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .otherProducts {
+
+        .otherProductsGrid {
+
+            .otherProductsHover {
+
+                .labelHidden {
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+
+                    h3 {
+                        font-size: 2.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+            flex-direction: column;
+
+            .infoContainer {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            .personalContainer {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .personalItemContainer {
+                    width: 45%;
+                    height: 150px;
+                    margin-bottom: 30px;
+
+                    .personalItem {
+                        width: 100%;
+                        padding-left: 45%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+        .footerBrand {
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .footerSignature {
+
+            p {
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+
+        nav {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        section {
+            width: 30%;
+            margin-right: 5%;
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .otherProducts {
+
+        .otherProductsGrid {
+
+            .labelHidden {
+
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        .contactContainer {
+            flex-direction: column;
+
+            .ordersContainer {
+                width: 100%;
+                margin-bottom: 50px;
+
+                .contactItemContainer {
+
+                    .contactItem {
+
+                        &:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+            .locationContainer {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        nav {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        section {
+            width: 35%;
+        }
+    }
+
+    .products {
+
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.6rem;
+            }
+        }
+
+        .otherProducts {
+
+            .otherProductsGrid {
+                display: flex;
+                flex-direction: column;
+                height: max-content;
+
+                .productsToPrepare {
+                    height: 300px;
+                    margin-bottom: 30px;
+                }
+
+                .desserts {
+                    height: 300px;
+                    margin-bottom: 30px;
+                }
+
+                .littleProducts {
+                    height: 300px;
+                }
+
+                .labelHidden {
+                    height: 90px;
+
+                    h3 {
+                        margin-bottom: 10px;
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .otherProductsHover:hover .labelHidden p {
+                    margin: 0 1%;
+                    opacity: 1;
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        .mainInfoContainer {
+
+            .personalContainer {
+
+                .personalItemContainer {
+
+                    .personalItem {
+                        padding-left: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    footer {
+
+        .footerBrand {
+            width: 35%;
+        }
+
+        .footerSocial {
+            width: 30%
+        }
+
+        .footerSignature {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+
+        #checkMenu:not(:checked)~nav {
+            display: none;
+        }
+
+        #checkMenu:checked~nav {
+            display: block;
+        }
+
+        #menu {
+            display: block;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            color: $fourthColor;
+            font-family: $textFont;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        #closeMenu {
+            display: none;
+        }
+
+        #checkMenu:checked~label #openMenu {
+            display: none;
+        }
+
+        #checkMenu:checked~label #closeMenu {
+            display: block;
+        }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300px;
+            width: 100%;
+            background-color: $fivethColor;
+            opacity: .9;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                align-items: center;
+                transition: 1s all;
+
+                li {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin: 0;
+                    }
+
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        button:focus+button {
+            display: none;
+        }
+
+        button:focus+nav {
+            display: block;
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .personalContainer {
+
+                .personalItemContainer {
+
+                    .personalItem {
+                        padding-left: 55%;
+
+                        p {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .infoContainer {
+
+                p {
+                    font-size: 1.3rem;
+                }
+
+                p:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .personalContainer {
+
+                .personalItemContainer {
+                    height: 120px;
+
+                    .personalItem {
+                        padding-left: 50%;
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+        .footerBrand {
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .footerSignature {
+
+            p {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+
+        section {
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .products {
+
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.5rem;
+            }
+        }
+
+        .otherProducts {
+
+            .otherProductsGrid {
+
+                .labelHidden {
+
+                    h3 {
+                        font-size: 2.5rem;
+                    }
+
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        .mainInfoContainer {
+
+            .personalContainer {
+
+                .personalItemContainer {
+                    width: 48%;
+                    height: 100px;
+
+                    .personalItem {
+                        padding-left: 45%;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        h2 {
+            font-size: 2.6rem;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+
+        .footerBrand {
+            margin-bottom: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footerSignature {
+            margin-top: 30px;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and(max-width: 600px) {
+    header {
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        nav {
+
+            ul {
+
+                li {
+
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        section {
+
+            p {
+                font-size: 1.8rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .products {
+
+        h2 {
+            font-size: 2.3rem;
+        }
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.3rem;
+            }
+
+            .productGrid {
+
+                .productArticle {
+
+                    .productCard {
+                        height: 250px;
+
+                        .productBack {
+
+                            p {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                    .productFooter {
+
+                        h3 {
+                            font-size: 1.3rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .otherProducts {
+
+            .otherProductsGrid {
+
+                .labelHidden {
+
+                    h3 {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        h2 {
+            font-size: 2.3rem;
+        }
+
+        .mainInfoContainer {
+
+            .infoContainer {
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .personalContainer {
+
+                .personalItemContainer {
+                    height: 80px;
+
+                    .personalItem {
+
+                        p {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        h2 {
+            font-size: 2.3rem;
+        }
+
+        .contactContainer {
+
+            .ordersContainer {
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .contactItemContainer {
+
+                    .contactItem {
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .locationContainer {
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+
+        section {
+            width: 50%;
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .products {
+
+        .specialProducts {
+            margin-bottom: 100px;
+
+            .productGrid {
+                grid-template-columns: repeat(1, 1fr);
+                height: max-content;
+
+                .productArticle {
+
+                    .productCard {
+                        height: 300px;
+
+                        .productBack {
+
+                            p {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .otherProducts {
+
+            .otherProductsGrid {
+
+                .labelHidden {
+
+                    h3 {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .infoContainer {
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .personalContainer {
+                flex-direction: column;
+
+                .personalItemContainer {
+                    width: 100%;
+                    height: 100px;
+
+                    .personalItem {
+
+                        p {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+
+        h1 {
+            font-size: 2.3rem;
+        }
+    }
+
+    main {
+
+        section {
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .products {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.2rem;
+            }
+
+            .productGrid {
+
+                .productArticle {
+
+                    .productCard {
+
+                        .productFooter {
+
+                            h3 {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .contact {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .contactContainer {
+
+            .ordersContainer {
+
+                .contactItemContainer {
+
+                    .contactItem {
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .locationContainer {
+
+                .locationFrame {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .products {
+
+        .specialProducts {
+
+            .productSubtitle {
+                font-size: 1.2rem;
+            }
+
+            .productGrid {
+
+                .productArticle {
+
+                    .productCard {
+                        height: 200px;
+
+                        .productBack {
+
+                            p {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .otherProducts {
+
+            .otherProductsGrid {
+
+                .labelHidden {
+
+                    h3 {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutUs {
+
+        .mainInfoContainer {
+
+            .infoContainer {
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        .contactContainer {
+
+            .ordersContainer {
+
+                p {
+                    font-size: 1rem;
+                }
+
+                .contactItemContainer {
+
+                    .contactItem {
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .locationContainer {
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

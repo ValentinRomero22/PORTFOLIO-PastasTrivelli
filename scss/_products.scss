@@ -1,0 +1,192 @@
+.products {
+    background-color: $thirdColor;
+
+    h2 {
+        color: $fourthColor;
+        font-family: $captionFont;
+        font-size: 4.5rem;
+    }
+
+    .specialProducts {
+        padding: 8% 10%;
+
+        .productSubtitle {
+            color: $mainColor;
+            font-family: $textFont;
+            font-size: 2rem;
+        }
+
+        .productGrid {
+            margin: 5% 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            gap: 5%;
+
+            .productArticle {
+
+                .productCard {
+                    width: 100%;
+                    height: 300px;
+                    color: $fourthColor;
+                    font-family: $textFont;
+                    position: relative;
+
+                    .productFace {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        transition: 1s;
+                    }
+
+                    .productFront {
+                        transform: perspective(600px) rotateY(0deg);
+
+                        img {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .productBack {
+                        padding: 15px;
+                        transform: perspective(600px) rotateY(180deg);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        color: $fivethColor;
+                        background: $mainColor;
+                        font-size: 1.5em;
+                        text-align: center;
+                    }
+
+                    .productFooter {
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                    &:hover .productFront {
+                        transform: perspective(600px) rotateY(180deg);
+                    }
+
+                    &:hover .productBack {
+                        transform: perspective(600px) rotateY(360deg);
+                    }
+                }
+
+                .productFooter {
+                    margin-top: 20px;
+                    font-family: $textFont;
+
+                    h3 {
+                        font-size: 1.5em;
+                        font-weight: 400;
+                        color: $fourthColor;
+                    }
+
+                    p {
+                        font-size: 1.5em;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .otherProducts {
+        padding: 3% 10% 10%;
+
+        .otherProductsGrid {
+            margin: 5% 0;
+            width: 100%;
+            height: 600px;
+            display: grid;
+            grid-template-areas:
+                "productsToPrepare desserts"
+                "productsToPrepare littleProducts";
+            grid-template-rows: 49% 49%;
+            grid-template-columns: 48% 48%;
+            row-gap: 4%;
+            column-gap: 2%;
+
+            .productsToPrepare {
+                grid-area: productsToPrepare;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .desserts {
+                grid-area: desserts;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .littleProducts {
+                grid-area: littleProducts;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .otherProductsHover {
+                position: relative;
+                border: 1px solid $thirdColor;
+                box-shadow: 5px 10px 15px $fivethColor;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .labelHidden {
+                height: 100px;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                position: absolute;
+                bottom: 0px;
+                background-color: $fivethColor;
+                opacity: .8;
+                color: $fourthColor;
+                text-align: center;
+                transition: .5s;
+
+                h3 {
+                    margin-bottom: 30px;
+                    font-family: $captionFont;
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-family: $textFont;
+                    font-size: 2rem;
+                    opacity: 0;
+                }
+            }
+
+            .otherProductsHover:hover .labelHidden {
+                height: 90%;
+            }
+
+            .otherProductsHover:hover .labelHidden p {
+                margin: 0 1%;
+                opacity: 1;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .otherProductsHover:hover .labelHidden p {
+                margin: 0 1%;
+                opacity: 1;
+            }
+        }
+    }
+}
